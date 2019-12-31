@@ -25,6 +25,7 @@ massive(CONNECTION_STRING).then(db => {
 app.post('/api/login', authCtrl.login);
 app.post('/api/register', authCtrl.register);
 app.post('/api/logout', authCtrl.logout);
+app.get('/api/user', authCtrl.getUser);
 
 ///MANIPULATING POSTS///
 // app.get('/api/posts/:id', ctrl.getPosts)

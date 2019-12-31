@@ -2,7 +2,7 @@ const bcrypt = require('bcryptjs');
 
 module.exports = {
     login: async(req, res) => {
-        const {email, password} = req.body;
+        const {email, user_password} = req.body;
         const {session} = req;
         const db = req.app.get('db');
         ///needs to be async////
@@ -12,7 +12,7 @@ module.exports = {
         if(!user){
             return res.status(400).send('EMAIL NOT FOUND')
         }
-        const authenticated = bcrypt.compareSync(password, user.user_password);
+        const authenticated = bcrypt.compareSync(user_password, user.user_password);
         if(authenticated){
             delete user.user_password;
             session.user = user;
@@ -44,4 +44,11 @@ module.exports = {
         req.session.destroy();
         res.sendStatus(200);
     },
+    getUser: (req, res) => {
+        if(req.session.user){
+            res.status(200).send(req.session.user);
+        } else {
+            res.status(200).send('');
+        }
+    }
 }
