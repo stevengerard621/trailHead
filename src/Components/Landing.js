@@ -1,7 +1,5 @@
 import React, {Component} from 'react'
 import HomeMap from './HomeMap'
-// import {Map, GoogleApiWrapper} from 'google-maps-react'
-// require('dotenv').config();
 
 class Landing extends Component {
     
@@ -16,9 +14,5 @@ class Landing extends Component {
         )
     }
 }
-
-// export default GoogleApiWrapper({
-//     apiKey: process.env.REACT_APP_GOOGLE_API_KEY
-//   })(Landing);
 
 export default Landing;

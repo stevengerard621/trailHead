@@ -3,13 +3,6 @@ import axios from 'axios';
 import {connect} from 'react-redux';
 import {getUser} from '../redux/reducer'
 import HomeMap from './HomeMap';
-// import {Map, GoogleApiWrapper} from 'google-maps-react';
-// require('dotenv').config();
-
-// const mapStyles = {
-//     width: '100%',
-//     height: '500px',
-//   };
 
 class Login extends Component {
     constructor(){
@@ -58,29 +51,9 @@ class Login extends Component {
                     </div>
                 </div>
                 <HomeMap />
-                {/* <div className='map'>
-                    <Map
-                        google={this.props.google}
-                        zoom={11}
-                        defaultOptions={{
-                         mapTypeId: 'terrain',  
-                        }}
-                        style={mapStyles}
-                        initialCenter={{ lat: 46.8721, lng: -113.9940}}
-                    />
-                </div> */}
             </div>
         )
     }
 }
 
 export default connect(null, {getUser})(Login);
-
-// const WrappedLogin = GoogleApiWrapper({
-//     apiKey: process.env.REACT_APP_GOOGLE_API_KEY
-//  })(Login);
-//  export default connect(null, {getUser})(WrappedLogin);
-
-// export default connect(null, {getUser}),GoogleApiWrapper({
-//     apiKey: process.env.REACT_APP_GOOGLE_API_KEY
-//   })(Login);
