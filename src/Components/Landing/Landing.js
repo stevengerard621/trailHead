@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
-import HomeMap from './HomeMap'
-
+import HomeMap from '../HomeMap/HomeMap'
+import './sass/landing.scss'
 
 //add registration. reference unit 6 review -- Register.
 

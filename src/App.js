@@ -1,6 +1,6 @@
 import React from 'react';
 import {withRouter} from 'react-router-dom';
-import Header from './Components/Header'
+import Header from './Components/Header/Header'
 import routes from './routes'
 import Axios from 'axios'
 import {useEffect} from 'react'

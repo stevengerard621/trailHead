@@ -31,6 +31,7 @@ app.get('/api/currentuser', authCtrl.currentUser)
 
 //USER ENDPOINTS//
 app.put('/api/profilepic', userCtrl.addProfilePic)
+app.put('/api/bio', userCtrl.addBio)
 
 ///MANIPULATING POSTS///
 // app.get('/api/posts/:id', ctrl.getPosts)

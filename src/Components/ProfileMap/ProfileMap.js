@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Map, GoogleApiWrapper, InfoWindow, Marker} from 'google-maps-react'
+import './sass/profileMap.scss'
 require('dotenv').config();
 
 const mapStyles = {
@@ -12,11 +13,11 @@ class ProfileMap extends Component {
         super();
         this.state = {
             locations: [
-                {
-                    lat: 46.8721, 
-                    lng: -113.9940,
-                    name: 'jumbo'
-                }
+                // {
+                //     lat: 46.8721, 
+                //     lng: -113.9940,
+                //     name: 'jumbo'
+                // }
             ]
         }
     }
@@ -35,13 +36,13 @@ class ProfileMap extends Component {
     
     render(){
         return(
-            <div>
+            <div className='profileMap'>
                 <Map
                     google={this.props.google}
                     zoom={11}
                     style={mapStyles}
                     initialCenter={{ lat: 46.8721, lng: -113.9940}}
-                    onClick={(e) => this.addMarker(e)}
+                    // onClick={(e) => this.addMarker(e)}
                 >
                     <Marker>
                         name={'Jumbo'}

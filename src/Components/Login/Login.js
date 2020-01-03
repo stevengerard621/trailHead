@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import {connect} from 'react-redux';
-import {getUser} from '../redux/reducer'
-import HomeMap from './HomeMap';
+import {getUser} from '../../redux/reducer'
+import HomeMap from '../HomeMap/HomeMap';
+import './sass/login.scss'
 
 class Login extends Component {
     constructor(){

@@ -1,9 +1,10 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
-import {connect} from 'react-redux';
-import {logout} from '../redux/reducer'
-import {withRouter} from 'react-router-dom';
 import axios from 'axios'
+import {Link} from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
+import {connect} from 'react-redux';
+import {logout} from '../../redux/reducer';
+import './sass/header.scss'
 
 function Header(props){
     const logout = () => {
