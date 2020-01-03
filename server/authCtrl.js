@@ -50,5 +50,13 @@ module.exports = {
         } else {
             res.status(200).send('');
         }
+    },
+    currentUser: (req,res) => {
+        console.log('currentuser hit')
+        if (req.session.user){
+            res.status(200).send(req.session.user)
+        } else {
+            res.sendStatus(404)
+        }
     }
 }

@@ -15,9 +15,6 @@ class HomeMap extends Component {
                 <Map
                     google={this.props.google}
                     zoom={11}
-                    defaultOptions={{
-                    mapTypeId: 'terrain',  
-                    }}
                     style={mapStyles}
                     initialCenter={{ lat: 46.8721, lng: -113.9940}}
                 />

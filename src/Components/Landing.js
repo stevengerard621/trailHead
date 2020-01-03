@@ -1,6 +1,9 @@
 import React, {Component} from 'react'
 import HomeMap from './HomeMap'
 
+
+//add registration. reference unit 6 review -- Register.
+
 class Landing extends Component {
     
     render(){

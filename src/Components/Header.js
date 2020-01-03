@@ -19,7 +19,7 @@ function Header(props){
                 {/* <h1>{props.user.username}</h1> */}
                 {!props.user.username ? <nav className='nav'>
                     <Link className='links' to='/'>Home</Link>
-                    <Link className='links' to='/Login'>Login</Link>
+                    <Link className='links' to='/Login'>Login/Register</Link>
                 </nav>
                 : <nav className='nav'>
                     <Link className='links' to='/'>Home</Link>

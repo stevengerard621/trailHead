@@ -3,6 +3,7 @@ const express = require('express'),
       massive = require('massive'),
       session = require('express-session'),
       authCtrl = require('./authCtrl'),
+      userCtrl = require('./userCtrl'),
       {SERVER_PORT, CONNECTION_STRING, SESSION_SECRET} = process.env;
       app = express();
 
@@ -26,6 +27,10 @@ app.post('/api/login', authCtrl.login);
 app.post('/api/register', authCtrl.register);
 app.post('/api/logout', authCtrl.logout);
 app.get('/api/user', authCtrl.getUser);
+app.get('/api/currentuser', authCtrl.currentUser)
+
+//USER ENDPOINTS//
+app.put('/api/profilepic', userCtrl.addProfilePic)
 
 ///MANIPULATING POSTS///
 // app.get('/api/posts/:id', ctrl.getPosts)

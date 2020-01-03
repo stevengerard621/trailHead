@@ -8,6 +8,7 @@ class Login extends Component {
     constructor(){
         super();
         this.state = {
+            username: '',
             email: '',
             password: ''
         }
@@ -26,6 +27,15 @@ class Login extends Component {
             this.props.history.push('/Profile')
         })
         .catch(err => console.log(err))
+    }
+
+    handleRegister = () => {
+        // const {email, password} = this.state;
+        axios.post('/api/register', {username: this.state.username, email: this.state.email,  user_password: this.state.password}).then(res => {
+            this.props.getUser(res.data)
+            this.props.history.push('/Profile')
+        })
+        .catch(err => console.log(err));
     }
     
     render(){
@@ -46,9 +56,28 @@ class Login extends Component {
                                 onChange={(event) => this.handleInput(event)}/>
                     </div>
                     <br/>
+                    <button onClick={this.handleLogin}>SIGN IN</button>
+                    <br/>
                     <div>
-                        <button onClick={this.handleLogin}>SIGN IN</button>
-                    </div>
+                        <input 
+                            maxLength='100'
+                            placeholder='USERNAME'
+                            name='username'
+                            onChange={(event) => this.handleInput(event)}/>
+                        <input 
+                            maxLength='100'
+                            placeholder='EMAIL'
+                            name='email'
+                            onChange={(event) => this.handleInput(event)}/>
+                        <input
+                            type='password' 
+                            maxLength='20'
+                            placeholder='PASSWORD'
+                            name='password'
+                            onChange={(event) => this.handleInput(event)}/>
+                    </div> 
+                    <br/>   
+                    <button onClick={this.handleRegister}>REGISTER</button>
                 </div>
                 <HomeMap />
             </div>
