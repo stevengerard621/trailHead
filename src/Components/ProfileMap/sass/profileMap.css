@@ -1,10 +1,18 @@
 .profileMap {
-  margin-top: 400px;
+  margin-top: 0px;
+}
+
+.profileMapForm {
+  border: solid 1px;
+}
+
+.latlngInput {
+  border: solid 1px;
 }
 
 @media (max-width: 400px) {
   .profileMap {
-    margin-top: 250px;
+    margin-top: 0px;
   }
 }
 /*# sourceMappingURL=profileMap.css.map */

@@ -1,5 +1,11 @@
-import {createStore, applyMiddleware} from 'redux';
-import promiseMiddleware from 'redux-promise-middleware';
+import {createStore, combineReducers, applyMiddleware} from 'redux';
+import reduxPromiseMiddleware from 'redux-promise-middleware';
 import reducer from './reducer';
+import mapReducer from './mapReducer';
 
-export default createStore(reducer, applyMiddleware(promiseMiddleware));
+const rootReducer = combineReducers({
+    reducer,
+    mapReducer
+})
+
+export default createStore(rootReducer, applyMiddleware(reduxPromiseMiddleware));

@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
 import {Map, GoogleApiWrapper, InfoWindow, Marker} from 'google-maps-react'
 import {connect} from 'react-redux'
-import {getMarker} from '../../redux/mapreducer'
+import {getMarker} from '../../redux/mapReducer'
 import './sass/profileMap.scss'
 import axios from 'axios';
-require('dotenv').config();
 
 const mapStyles = {
     width: '100%',
@@ -18,7 +17,7 @@ class ProfileMap extends Component {
             showingInfoWindow: false,
             activeMarker: {},
             selectedPlace: {},
-            allLocations: [],
+            locations: [],
             lat: 0, 
             lng: 0,
             trail_name: ''
@@ -27,8 +26,7 @@ class ProfileMap extends Component {
 
     componentDidMount() {
         this.getAllMarkers()
-        console.log(this.state.allLocations)
-
+        console.log(this.state.locations)
     }
 
     handleInput = (event) => {
@@ -46,8 +44,8 @@ class ProfileMap extends Component {
     }
 
     getAllMarkers = () => {
-        axios.get('./api/getmarkers').then(res => this.setState({allLocations: res.data}))
-        console.log(this.state.allLocations)
+        axios.get('./api/getmarkers').then(res => this.setState({locations: res.data}))
+        console.log(this.state.locations)
     }
 
     onMarkerClick = (props, marker, e) =>
@@ -69,36 +67,36 @@ class ProfileMap extends Component {
     render(){
         return(
             <div className='profileMap'>
-                <div>
-                    <input 
+                <form className='profileMapForm'>
+                    <input className='latlngInput'
                         type="text"
                         placeholder="Latitude"
                         name="lat"
                         onChange={(event) => this.handleInput(event)}/>
-                    <input 
+                    <input className='latlngInput'
                         type="text"
                         placeholder="Longitude"
                         name="lng"
                         onChange={(event) => this.handleInput(event)}/>
-                    <input 
+                    <input className='latlngInput'
                         type="text"
                         placeholder="Trail Name"
                         name="trail_name"
                         onChange={(event) => this.handleInput(event)}/>
                     <button onClick={this.addMarker}>Add Marker</button>
-                </div>
+                </form>
                 <div>
                     <Map
                         google={this.props.google}
-                        zoom={11}
+                        zoom={12}
                         style={mapStyles}
                         initialCenter={{ lat: 46.8721, lng: -113.9940}}
                     >
-                        <Marker
+                        {/* <Marker
                             onClick={this.onMarkerClick}
                             name={<h2>Missoula</h2>}
-                        />
-                        {this.state.allLocations.map( (el) => {
+                        /> */}
+                        {this.state.locations.map( (el) => {
                              return <Marker
                                 onClick={this.onMarkerClick}
                                 name={<h2>{el.trail_name}</h2>}

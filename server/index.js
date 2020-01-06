@@ -34,7 +34,7 @@ app.get('/api/currentuser', authCtrl.currentUser)
 app.put('/api/profilepic', userCtrl.addProfilePic)
 app.put('/api/bio', userCtrl.addBio)
 
-//PROFILE MAP ENDPOINTS//
+//MAP ENDPOINTS//
 app.post('/api/marker', mapCtrl.addMarker)
 app.get('/api/getmarkers', mapCtrl.getMarkers)
 

@@ -10,7 +10,7 @@ import './App.css';
 
 function App(props) {
   useEffect(() => {
-    console.log('useeffect hit')
+    // console.log('useeffect hit')
     Axios.get('api/currentuser')
     .then((res) => {
       props.getUser(res.data)

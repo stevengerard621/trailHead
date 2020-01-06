@@ -18,7 +18,7 @@ function Header(props){
             <div className='header'>
                 <h1 className='logo'>TRAILHEAD</h1>
                 {/* <h1>{props.user.username}</h1> */}
-                {!props.user.username ? <nav className='nav'>
+                {!props.reducer.user.username ? <nav className='nav'>
                     <Link className='links' to='/'>Home</Link>
                     <Link className='links' to='/Login'>Login/Register</Link>
                 </nav>

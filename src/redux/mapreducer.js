@@ -1,7 +1,7 @@
 const initialState = {
-    marker: {}
+    marker: []
 }
-
+console.log(initialState.marker)
 const GET_MARKER = 'GET_MARKER'
 
 export function getMarker(markerObj){
@@ -11,7 +11,7 @@ export function getMarker(markerObj){
     }
 }
 
-export default function reducer(state = initialState, action){
+export default function mapReducer(state = initialState, action){
     const{type, payload} = action;
     switch(type){
         case GET_MARKER:

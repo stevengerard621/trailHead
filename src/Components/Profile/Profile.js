@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {Component} from 'react'
 import {getUser} from '../../redux/reducer'
 import ProfileMap from '../ProfileMap/ProfileMap'
+import ProfileBackground from '../ProfileBackground/ProfileBackground'
 import Axios from 'axios';
 import './sass/profile.scss'
 
@@ -37,17 +38,16 @@ class Profile extends Component {
     }
     
     render(){
-        console.log(this.props)
+        // console.log(this.props)
         return(
             <div>
-                <div className='profile'>
-                    <section className='userCard'>
-                        <section className='cropPic'>
-                            <img className='profilepic' src={this.props.user.profile_pic} alt=""/>
-                        </section>
-                        <h4 className='userInfo'>{this.props.user.username}</h4>
-                        <h4 className='userInfo'>{this.props.user.email}</h4>
-                        <h4 className='userInfo'>{this.props.user.bio}</h4>
+                <div className='boop'>
+                    <ProfileBackground />
+                    <form className='userCard'>
+                        <img className='profilepic' src={this.props.reducer.user.profile_pic} alt=""/>
+                        <h4 className='userInfo'>{this.props.reducer.user.username}</h4>
+                        <h4 className='userInfo'>{this.props.reducer.user.email}</h4>
+                        <h4 className='userInfo'>{this.props.reducer.user.bio}</h4>
                         <input
                             className='input' 
                             type="text" 
@@ -64,7 +64,7 @@ class Profile extends Component {
                             value={this.state.bio}
                             onChange={(event) => this.handleInput(event)}/>
                         <button onClick={() => this.handleBioClick()}>ADD</button>
-                    </section>
+                    </form>
                 </div>
                 <div>
                     <ProfileMap />    
