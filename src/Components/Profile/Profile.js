@@ -41,22 +41,30 @@ class Profile extends Component {
         return(
             <div>
                 <div className='profile'>
-                    <h4>{this.props.user.username}</h4>
-                    <h4>{this.props.user.email}</h4>
-                    <img className='profilepic' src={this.props.user.profile_pic} alt=""/>
-                    <h4>{this.props.user.bio}</h4>
-                    <input type="text" 
-                        placeholder='Profile Pic URL'
-                        name='profile_pic'
-                        value={this.state.profile_pic}
-                        onChange={(event) => this.handleInput(event)}/>
-                    <button onClick={() => this.handlePicClick()}>ADD</button>
-                    <input type="text"
-                           placeholder='User Bio'
-                           name='bio'
-                           value={this.state.bio}
-                           onChange={(event) => this.handleInput(event)}/>
-                    <button onClick={() => this.handleBioClick()}>ADD</button>
+                    <section className='userCard'>
+                        <section className='cropPic'>
+                            <img className='profilepic' src={this.props.user.profile_pic} alt=""/>
+                        </section>
+                        <h4 className='userInfo'>{this.props.user.username}</h4>
+                        <h4 className='userInfo'>{this.props.user.email}</h4>
+                        <h4 className='userInfo'>{this.props.user.bio}</h4>
+                        <input
+                            className='input' 
+                            type="text" 
+                            placeholder='Profile Pic URL'
+                            name='profile_pic'
+                            value={this.state.profile_pic}
+                            onChange={(event) => this.handleInput(event)}/>
+                        <button onClick={() => this.handlePicClick()}>ADD</button>
+                        <input 
+                            className='input'
+                            type="text"
+                            placeholder='User Bio'
+                            name='bio'
+                            value={this.state.bio}
+                            onChange={(event) => this.handleInput(event)}/>
+                        <button onClick={() => this.handleBioClick()}>ADD</button>
+                    </section>
                 </div>
                 <div>
                     <ProfileMap />    

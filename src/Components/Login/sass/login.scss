@@ -1,3 +1,5 @@
+
+
 .carousel {
     height: 350px;
     /* width: 100%; */
@@ -18,3 +20,22 @@
     text-align: center;
     margin: 80px 20px 0px;
 }
+
+.loginInput {
+    height: 20px;
+    width: 150px;
+    margin: 10px;
+    margin-bottom: 3px;
+    border-radius: 10px;
+    opacity: .85;
+    border: solid 0px;
+    color: black;
+    border-radius: 10px;
+    font-size: .9em;
+}
+
+.loginInput:hover {
+    background-color: rgb(199,233,199);
+    opacity: .7;
+}
+

@@ -4,6 +4,7 @@ const express = require('express'),
       session = require('express-session'),
       authCtrl = require('./authCtrl'),
       userCtrl = require('./userCtrl'),
+      mapCtrl = require('./mapCtrl'),
       {SERVER_PORT, CONNECTION_STRING, SESSION_SECRET} = process.env;
       app = express();
 
@@ -32,6 +33,10 @@ app.get('/api/currentuser', authCtrl.currentUser)
 //USER ENDPOINTS//
 app.put('/api/profilepic', userCtrl.addProfilePic)
 app.put('/api/bio', userCtrl.addBio)
+
+//PROFILE MAP ENDPOINTS//
+app.post('/api/marker', mapCtrl.addMarker)
+app.get('/api/getmarkers', mapCtrl.getMarkers)
 
 ///MANIPULATING POSTS///
 // app.get('/api/posts/:id', ctrl.getPosts)

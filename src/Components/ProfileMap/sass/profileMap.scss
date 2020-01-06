@@ -1,3 +1,9 @@
 .profileMap {
-    margin-top: 200px;
+    margin-top: 400px;
+}
+
+@media (max-width: 400px) {
+    .profileMap {
+        margin-top: 250px;
+    }
 }

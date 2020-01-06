@@ -1,3 +1,5 @@
+
+
 .profile {
     height: 350px;
     background-image: url("https://d36hbyt2dpr66x.cloudfront.net/wp-content/uploads/2018/03/Running-camp-Arevalo.jpg");
@@ -8,9 +10,47 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 50px;
+    box-shadow: 0px 10px 8px #858585;
 }
+
+.userCard {
+    display: flex;
+    flex-direction: column;
+    margin-left: -800px;
+}
+
+
 
 .profilepic {
     height: 200px;
-    border-radius: 200px;
+    border-radius: 100px;
+    margin-top: 375px;
+}
+
+.userInfo {
+    margin: 0px;
+    display: flex;
+}
+
+.input {
+    border: solid 2px green;
+    background: #eeeeee;
+
+}
+
+@media (max-width: 400px) {
+    .profile {
+        height: 200px;
+    }
+
+    .profilepic {
+        height: 100px;
+        // width: 100px;
+        border-radius: 100px;
+        margin-top: 225px;
+    }
+
+    .userCard {
+        margin-left: -150px;
+    }
 }

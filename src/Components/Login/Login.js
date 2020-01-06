@@ -47,33 +47,40 @@ class Login extends Component {
                     <br/>
                     <br/>
                     <div className='login'>
-                        <input  type="text" 
-                                placeholder="EMAIL"
+                        <input  className='loginInput'
+                                type="text" 
+                                placeholder="    EMAIL"
                                 name='email'
-                                onChange={(event) => this.handleInput(event)}/>
-                        <input type="password" 
-                                placeholder="PASSWORD"
+                                onChange={(event) => this.handleInput(event)}
+                                // value={this.state.email}
+                                />
+                        <input className='loginInput'
+                                type="password" 
+                                placeholder="    PASSWORD"
                                 name='password'
                                 onChange={(event) => this.handleInput(event)}/>
                     </div>
                     <br/>
                     <button onClick={this.handleLogin}>SIGN IN</button>
                     <br/>
-                    <div>
+                    <div className='login'>
                         <input 
+                            className='loginInput'
                             maxLength='100'
-                            placeholder='USERNAME'
+                            placeholder='     USERNAME'
                             name='username'
                             onChange={(event) => this.handleInput(event)}/>
                         <input 
+                            className='loginInput'
                             maxLength='100'
-                            placeholder='EMAIL'
+                            placeholder='     EMAIL'
                             name='email'
                             onChange={(event) => this.handleInput(event)}/>
                         <input
+                            className='loginInput'
                             type='password' 
                             maxLength='20'
-                            placeholder='PASSWORD'
+                            placeholder='     PASSWORD'
                             name='password'
                             onChange={(event) => this.handleInput(event)}/>
                     </div> 
