@@ -1,17 +1,40 @@
 .profileMap {
-    margin-top: 0px;
+    // border: 2px solid red;
+    display: flex;
+    flex-direction: column;
 }
 
 .profileMapForm {
-    border: solid 1px;
+    // border: 2px solid green;
+    margin: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.map {
+    // border: 2px solid chartreuse;
 }
 
 .latlngInput {
-    border: solid 1px;
+    border: 2px solid peru;
+    width: 200px;
+    height: 35px;
+    border-radius: 17.5px;
+    font-size: .9em;
+}
+
+.latlngInput:hover {
+    background-color: rgb(199,233,199);
+    cursor: pointer;
 }
 
 @media (max-width: 400px) {
     .profileMap {
         margin-top: 0px;
+    }
+
+    .profileMapForm {
+        flex-direction: column;
+        align-items: center;
     }
 }

@@ -70,22 +70,22 @@ class ProfileMap extends Component {
                 <form className='profileMapForm'>
                     <input className='latlngInput'
                         type="text"
-                        placeholder="Latitude"
+                        placeholder="     Latitude Dec.Deg"
                         name="lat"
                         onChange={(event) => this.handleInput(event)}/>
                     <input className='latlngInput'
                         type="text"
-                        placeholder="Longitude"
+                        placeholder="     Longitude Dec.Deg"
                         name="lng"
                         onChange={(event) => this.handleInput(event)}/>
                     <input className='latlngInput'
                         type="text"
-                        placeholder="Trail Name"
+                        placeholder="     Trail Name"
                         name="trail_name"
                         onChange={(event) => this.handleInput(event)}/>
                     <button onClick={this.addMarker}>Add Marker</button>
                 </form>
-                <div>
+                <div className='map'>
                     <Map
                         google={this.props.google}
                         zoom={12}
@@ -96,8 +96,9 @@ class ProfileMap extends Component {
                             onClick={this.onMarkerClick}
                             name={<h2>Missoula</h2>}
                         /> */}
-                        {this.state.locations.map( (el) => {
+                        {this.state.locations.map( (el, index) => {
                              return <Marker
+                                key = {`location: ${el}, ${index}`}
                                 onClick={this.onMarkerClick}
                                 name={<h2>{el.trail_name}</h2>}
                                 // position={{lat: 46.8791, lng: -113.9565}}

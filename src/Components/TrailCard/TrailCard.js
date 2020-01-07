@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import { getMarker } from '../redux/mapReducer';
+import { getMarker } from '../../redux/mapReducer';
 import axios from 'axios';
-
+import './sass/trailCard.scss'
 
 
 class TrailCard extends Component {
@@ -20,11 +20,17 @@ class TrailCard extends Component {
         const {marker} = this.props.mapReducer
         console.log(this.props)
         return(
-            <div>
-                {marker.length ? marker.map(el => (
-                <div><h1>{el.trail_name}</h1>
-                <h3>{el.lat}</h3></div>
-        )) : null }
+            //html table css in app.css
+            <div className="trailCard">
+                <table>
+                    {marker.length ? marker.map((el) => (
+                        <div key = {el}>
+                            <th>{el.trail_name}</th>
+                            <tr>{`Latitude: ${el.lat}`}</tr>
+                            <tr>{`Longitude: ${el.lng}`}</tr>
+                        </div>
+                    )) : null }
+                </table>
             </div>
         )
     }

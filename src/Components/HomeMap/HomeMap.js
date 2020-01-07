@@ -60,8 +60,9 @@ class HomeMap extends Component {
                             onClick={this.onMarkerClick}
                             name={<h2>Missoula</h2>}
                         /> */}
-                        {this.state.locations.map( (el) => {
+                        {this.state.locations.map( (el, index) => {
                              return <Marker
+                                key = {`location: ${el}, ${index}`}
                                 onClick={this.onMarkerClick}
                                 name={<h2>{el.trail_name}</h2>}
                                 // position={{lat: 46.8791, lng: -113.9565}}

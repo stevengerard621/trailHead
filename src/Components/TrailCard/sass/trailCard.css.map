@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAC;EAEP,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;CACtB;;AAED,MAAM,EAAE,SAAS,EAAE,KAAK;EAEpB,AAAA,UAAU,CAAC;IACP,KAAK,EAAE,KAAK;GACf",
+    "sources": [
+        "trailCard.scss"
+    ],
+    "names": [],
+    "file": "trailCard.css"
+}

@@ -1,0 +1,14 @@
+.trailCard {
+    // border: 2px solid red;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 400px) {
+    
+    .trailCard {
+        width: 100vw;
+    }
+}

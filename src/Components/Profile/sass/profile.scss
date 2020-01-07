@@ -1,56 +1,79 @@
 
 .boop{
-    border: solid 5px chartreuse;
+    // border: solid 5px chartreuse;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .userCard {
+    // border: solid 3px green;
     // height: 400px;
     // box-sizing: border-box;
-    // margin-top: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 50vw;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     // align-items: flex-start;
-    border: solid 3px green;
 }
 
 // .cropPic {
 //     border: solid 3px brown;
 // }
+// .proTrailList {
+//     border: 3px solid red;
+//     width: 50vw;
+//     display: flex;
+
+// }
 
 .profilepic {
-    border: solid 3px blue;
-    height: 200px;
+    // border: solid 3px blue;
+    height: 150px;
     border-radius: 100px;
     margin: 30px;
+
 }
 
 .userInfo {
-    border: solid red 1px;
+    // border: solid red 1px;
     margin: 2px;
     display: flex;
 }
 
 .input {
-    border: solid 2px green;
-    background: #eeeeee;
+    // border: solid 2px green;
+    border: 2px solid peru;
+    height: 35px;
+    width: 150px;
+    border-radius: 17.5px;
     margin: 2px;
+    font-size: .9em;
+}
 
+.input:hover {
+    background-color: rgb(199,233,199);
+    cursor: pointer;
 }
 
 @media (max-width: 400px) {
+
+    .boop {
+        flex-direction: column;
+    }
+
     .profile {
         height: 200px;
     }
 
     .profilepic {
         height: 100px;
-        // width: 100px;
         border-radius: 100px;
-        margin-top: 225px;
     }
 
     .userCard {
-        margin-left: -150px;
+        width: 100vw;
     }
 }

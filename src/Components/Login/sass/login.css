@@ -49,5 +49,6 @@
 .loginInput:hover {
   background-color: #c7e9c7;
   opacity: .7;
+  cursor: pointer;
 }
 /*# sourceMappingURL=login.css.map */

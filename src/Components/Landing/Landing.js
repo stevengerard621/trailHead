@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import HomeMap from '../HomeMap/HomeMap'
-import TrailCard from '../TrailCard'
+import TrailCard from '../TrailCard/TrailCard'
 import './sass/landing.scss'
 
 class Landing extends Component {
