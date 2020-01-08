@@ -4,7 +4,7 @@ import {Component} from 'react'
 import {getUser} from '../../redux/reducer'
 import ProfileMap from '../ProfileMap/ProfileMap'
 import ProfileBackground from '../ProfileBackground/ProfileBackground'
-import TrailCard from '../TrailCard/TrailCard'
+import UserTrails from '../UserTrails/UserTrails'
 import Axios from 'axios';
 import './sass/profile.scss'
 
@@ -45,12 +45,12 @@ class Profile extends Component {
                 <ProfileBackground />
                 <div className='boop'>
                     <form className='userCard'>
-                        <table>
+                        <div>
                             <img className='profilepic' src={this.props.reducer.user.profile_pic} alt=""/>
-                            <th className='userInfo'>{this.props.reducer.user.username}</th>
-                            <tr className='userInfo'>{this.props.reducer.user.email}</tr>
-                            <tr className='userInfo'>{this.props.reducer.user.bio}</tr>
-                        </table>
+                            <div className='userInfo'><strong>{this.props.reducer.user.username}</strong></div>
+                            <div className='userInfo'>{this.props.reducer.user.email}</div>
+                            <div className='userInfo'>{this.props.reducer.user.bio}</div>
+                        </div>
                         <input
                             className='input' 
                             type="text" 
@@ -58,7 +58,7 @@ class Profile extends Component {
                             name='profile_pic'
                             value={this.state.profile_pic}
                             onChange={(event) => this.handleInput(event)}/>
-                        <button onClick={() => this.handlePicClick()}>ADD</button>
+                        <button className='proButton' onClick={() => this.handlePicClick()}>ADD</button>
                         <input 
                             className='input'
                             type="text"
@@ -66,9 +66,9 @@ class Profile extends Component {
                             name='bio'
                             value={this.state.bio}
                             onChange={(event) => this.handleInput(event)}/>
-                        <button onClick={() => this.handleBioClick()}>ADD</button>
+                        <button className='proButton' onClick={() => this.handleBioClick()}>ADD</button>
                     </form>
-                    <TrailCard className='proTrailList'/>
+                    <UserTrails className='proTrailList'/>
                 </div>
                 <div>
                     <ProfileMap />    

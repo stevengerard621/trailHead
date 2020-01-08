@@ -17,14 +17,15 @@ function Header(props){
         return(
             <div className='header'>
                 <h1 className='logo'>TRAILHEAD</h1>
-                {/* <h1>{props.user.username}</h1> */}
                 {!props.reducer.user.username ? <nav className='nav'>
                     <Link className='links' to='/'>Home</Link>
+                    <Link className='links' to='/About'>About</Link>
                     <Link className='links' to='/Login'>Login/Register</Link>
                 </nav>
                 : <nav className='nav'>
+                    <Link className='links' to='/Profile'><img className="navProPic" src={props.reducer.user.profile_pic} alt=""/></Link>
                     <Link className='links' to='/'>Home</Link>
-                    <Link className='links' to='/Profile'>Profile</Link>
+                    <Link className='links' to='/About'>About</Link>
                     <Link className='links' to='/' onClick={logout}>Logout</Link>
                 </nav>}
 
@@ -35,6 +36,6 @@ function Header(props){
 
 const mapStateToProps = (reduxState) => {
     return reduxState;
-}
+} 
 
 export default withRouter(connect(mapStateToProps, {logout})(Header));

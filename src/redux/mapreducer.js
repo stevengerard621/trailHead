@@ -1,7 +1,7 @@
 const initialState = {
     marker: []
 }
-console.log(initialState.marker)
+
 const GET_MARKER = 'GET_MARKER'
 
 export function getMarker(markerObj){

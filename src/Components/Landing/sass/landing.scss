@@ -12,9 +12,14 @@
 }
 
 .page-description {
+    
     display: flex;
     align-items: center;
     flex-direction: column;
     text-align: center;
     margin: 80px 20px 0px;
+    width: 30vw;
+    // border: 2px solid red;
+    background-color: rgba(67,65,68, .5);
+    // opacity: .6;
 }

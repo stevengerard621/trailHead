@@ -21,11 +21,15 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #b9b8bd;
 }
 
 .profilepic {
   height: 150px;
-  border-radius: 100px;
+  border-radius: 75px;
   margin: 30px;
 }
 
@@ -43,6 +47,10 @@
   border-radius: 17.5px;
   margin: 2px;
   font-size: .9em;
+  outline-color: #ffeba1;
+  outline-width: 10px;
+  -webkit-box-shadow: 0 0 15px #ffeba1;
+          box-shadow: 0 0 15px #ffeba1;
 }
 
 .input:hover {

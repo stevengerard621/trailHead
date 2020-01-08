@@ -1,9 +1,23 @@
+/* html{
+    background-color: rgb(11,10,15);
+} */
+
 .app {
     margin: 0px;
-    height: 300px;
+    height: 100%;
     background-color: blue;
 }
 
-table, th, td {
+table {
+    border: 2px solid black;
+    display:block;
+    overflow:auto;
+    height:400px;
+    max-width: 350px;
+}
+
+th {
     border: 1px solid black;
+    margin: 5px;
+    width: 95%;
 }

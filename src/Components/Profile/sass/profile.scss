@@ -16,23 +16,15 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    color: rgb(185,184,189);
     // align-items: flex-start;
 }
-
-// .cropPic {
-//     border: solid 3px brown;
-// }
-// .proTrailList {
-//     border: 3px solid red;
-//     width: 50vw;
-//     display: flex;
-
-// }
 
 .profilepic {
     // border: solid 3px blue;
     height: 150px;
-    border-radius: 100px;
+    // width: 150px;
+    border-radius: 75px;
     margin: 30px;
 
 }
@@ -51,11 +43,18 @@
     border-radius: 17.5px;
     margin: 2px;
     font-size: .9em;
+    outline-color: rgb(255,235,161);
+    outline-width: 10px;
+    box-shadow: 0 0 15px rgb(255,235,161);
 }
 
 .input:hover {
     background-color: rgb(199,233,199);
     cursor: pointer;
+}
+
+.proButton {
+    
 }
 
 @media (max-width: 400px) {

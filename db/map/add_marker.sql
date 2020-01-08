@@ -1,10 +1,12 @@
 INSERT INTO marker (
     lat,
     lng,
-    trail_name
+    trail_name,
+    user_id
 ) VALUES (
 $1,
 $2,
-$3
+$3,
+$4
 ) 
 RETURNING *;

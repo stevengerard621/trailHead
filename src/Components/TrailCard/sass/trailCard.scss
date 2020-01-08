@@ -1,9 +1,26 @@
 .trailCard {
     // border: 2px solid red;
     width: 50vw;
+    height: 300px;
+    overflow: auto;
+    overflow-y: visible;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-right: -30px;
+    color: rgb(185,184,189);
+}
+
+.eachTrail {
+    border: 2px solid rgb(185,184,189);
+    margin: 3px;
+    height: 140px;
+    width: 300px;
+    padding-left: 30px;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // overflow: auto;
 }
 
 @media (max-width: 400px) {
@@ -11,4 +28,5 @@
     .trailCard {
         width: 100vw;
     }
+
 }

@@ -7,17 +7,17 @@ profile_pic varchar(200),
 bio varchar(500)
 );
 
-create table trailhead (
-trailhead_id serial primary key,
-trail_name varchar(150),
-trail_pic varchar(200),
-description varchar(10000),
-distance numeric,
-gain integer,
-loss integer,
-rating numeric,
-map varchar(300)
-);
+-- create table trailhead (
+-- trailhead_id serial primary key,
+-- trail_name varchar(150),
+-- trail_pic varchar(200),
+-- description varchar(10000),
+-- distance numeric,
+-- gain integer,
+-- loss integer,
+-- rating numeric,
+-- map varchar(300)
+-- );
 
 create table marker (
 marker_id serial primary key,

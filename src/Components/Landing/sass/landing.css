@@ -31,5 +31,7 @@
           flex-direction: column;
   text-align: center;
   margin: 80px 20px 0px;
+  width: 30vw;
+  background-color: rgba(67, 65, 68, 0.5);
 }
 /*# sourceMappingURL=landing.css.map */

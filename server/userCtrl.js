@@ -12,5 +12,11 @@ module.exports = {
         console.log(req.session)
         const {user_id} = req.session.user
         db.user.add_bio([bio, user_id]).then((bio) => res.status(200).send(bio)).catch(err => console.log(err))
+    },
+
+    getUserTrails: (req,res) => {
+        const db = req.app.get('db')
+        const {user_id} = req.session.user
+        db.user.get_user_trails(user_id).then(result => res.status(200).send(result)).catch(err => console.log(err))
     }
 }

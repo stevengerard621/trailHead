@@ -26,7 +26,7 @@ class ProfileMap extends Component {
 
     componentDidMount() {
         this.getAllMarkers()
-        console.log(this.state.locations)
+        // console.log(this.state.locations)
     }
 
     handleInput = (event) => {
@@ -43,9 +43,16 @@ class ProfileMap extends Component {
         this.getAllMarkers()
     }
 
+    // deleteMarker = () => {
+    //     console.log('hit')
+    //     axios.delete(
+    //       `/api/deletemarker/${this.state.selectedPlace.thisMarker.marker_id}`
+    //     ).then(res => this.getAllMarkers());
+    // }
+
     getAllMarkers = () => {
         axios.get('./api/getmarkers').then(res => this.setState({locations: res.data}))
-        console.log(this.state.locations)
+        // console.log(this.state.locations)
     }
 
     onMarkerClick = (props, marker, e) =>
@@ -65,6 +72,7 @@ class ProfileMap extends Component {
   };
     
     render(){
+        // console.log(this.state.selectedPlace)
         return(
             <div className='profileMap'>
                 <form className='profileMapForm'>
@@ -101,8 +109,9 @@ class ProfileMap extends Component {
                                 key = {`location: ${el}, ${index}`}
                                 onClick={this.onMarkerClick}
                                 name={<h2>{el.trail_name}</h2>}
+                                thisMarker={el}
                                 // position={{lat: 46.8791, lng: -113.9565}}
-                                position={{lat: el.lat, lng: el.lng}}
+                                position={{lat: el.lat, lng: el.lng}} 
                             />
                         })
                     }
@@ -114,6 +123,7 @@ class ProfileMap extends Component {
                             <div>
                                 <h4>{this.state.selectedPlace.name}</h4>
                             </div>
+                                {/* <button type="button" onClick={() => this.deleteMarker()}>DELETE</button> */}
                         </InfoWindow>
                     </Map>
                 </div>

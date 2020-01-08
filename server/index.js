@@ -33,10 +33,12 @@ app.get('/api/currentuser', authCtrl.currentUser)
 //USER ENDPOINTS//
 app.put('/api/profilepic', userCtrl.addProfilePic)
 app.put('/api/bio', userCtrl.addBio)
+app.get('/api/usertrails', userCtrl.getUserTrails)
 
 //MAP ENDPOINTS//
 app.post('/api/marker', mapCtrl.addMarker)
 app.get('/api/getmarkers', mapCtrl.getMarkers)
+app.delete('/api/deletemarker/:marker_id', mapCtrl.deleteMarker)
 
 ///MANIPULATING POSTS///
 // app.get('/api/posts/:id', ctrl.getPosts)
