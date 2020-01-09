@@ -66,13 +66,25 @@
     .profile {
         height: 200px;
     }
+    .proCent {
+
+    }
 
     .profilepic {
         height: 100px;
         border-radius: 100px;
+        margin-left: 100px;
+    }
+
+    .userInfo {
+        justify-content: center;
+        margin: 10px;
     }
 
     .userCard {
+        height: 400px;
         width: 100vw;
+        display: flex;
+        justify-content: center;
     }
 }

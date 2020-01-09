@@ -18,7 +18,7 @@
   margin-bottom: 50px;
 }
 
-.page-description {
+.login_description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,6 +31,11 @@
           flex-direction: column;
   text-align: center;
   margin: 80px 20px 0px;
+  width: 30vw;
+  background-color: rgba(67, 65, 68, 0.32);
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 10px rgba(67, 65, 68, 0.8);
+          box-shadow: 0px 0px 10px rgba(67, 65, 68, 0.8);
 }
 
 .loginInput {
@@ -50,5 +55,31 @@
   background-color: #c7e9c7;
   opacity: .7;
   cursor: pointer;
+}
+
+@media (max-width: 400px) {
+  .login_description {
+    width: 90vw;
+  }
+  .loginInput {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 5px;
+  }
+  .login {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .register {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 /*# sourceMappingURL=login.css.map */
