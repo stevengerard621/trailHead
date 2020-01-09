@@ -91,7 +91,7 @@ class ProfileMap extends Component {
                         placeholder="     Trail Name"
                         name="trail_name"
                         onChange={(event) => this.handleInput(event)}/>
-                    <button onClick={this.addMarker}>Add Marker</button>
+                    <button className="addMarkerButton" onClick={this.addMarker}>Add Marker</button>
                 </form>
                 <div className='map'>
                     <Map

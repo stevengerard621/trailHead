@@ -21,15 +21,15 @@ app.use(session({
 massive(CONNECTION_STRING).then(db => {
     app.set('db', db)
     console.log('MASSIVE CONNECTED')
-    const PORT = SERVER_PORT || 6621;
+    const PORT = SERVER_PORT || 6620;
     app.listen(PORT, () => console.log(`${PORT} FIRING ON ALL CYLINDERS`))
 })
 
 //AUTH ENDPOINTS//
-app.post('/api/login', authCtrl.login);
-app.post('/api/register', authCtrl.register);
-app.post('/api/logout', authCtrl.logout);
-app.get('/api/user', authCtrl.getUser);
+app.post('/api/login', authCtrl.login)
+app.post('/api/register', authCtrl.register)
+app.post('/api/logout', authCtrl.logout)
+app.get('/api/user', authCtrl.getUser)
 app.get('/api/currentuser', authCtrl.currentUser)
 
 //USER ENDPOINTS//

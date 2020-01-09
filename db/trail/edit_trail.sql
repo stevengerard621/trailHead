@@ -1,6 +1,5 @@
 update marker 
-set trail_name = ${trail_name},
-    description = ${description},
+set description = ${description},
     distance = ${distance},
     gain = ${gain},
     loss = ${loss}

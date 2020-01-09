@@ -6,10 +6,11 @@ module.exports = {
     },
 
     editTrail: (req, res) => {
+        console.log(req.body)
         const {user_id} = req.session.user
-        const {trail_name, description, distance, gain, loss} = req.body
+        const {description, distance, gain, loss} = req.body
         const {marker_id} = req.params
         const db = req.app.get('db')
-        db.trail.edit_trail({trail_name, description, distance, gain, loss, marker_id, user_id}).then((trail) => res.status(200).send(trail)).catch(err => console.log(err))
+        db.trail.edit_trail({description, distance, gain, loss, marker_id, user_id}).then((trail) => res.status(200).send(trail)).catch(err => console.log(err))
     }
 }
