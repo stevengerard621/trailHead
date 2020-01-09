@@ -25,7 +25,10 @@ class TrailCard extends Component {
                 <section >
                     {marker.length ? marker.map((el, i) => (
                         <div className="eachTrail" key = {i} id = {i}>
-                            <h4><strong><u>{el.trail_name}</u></strong></h4>
+                            <h4 onClick={() => {
+                                this.props.toggleEdit()
+                                this.props.setId(el.marker_id)
+                            }}><strong><u>{el.trail_name}</u></strong></h4>
                             <h6>{`Latitude: ${el.lat}`}</h6>
                             <h6>{`Longitude: ${el.lng}`}</h6>
                         </div>

@@ -13,7 +13,7 @@ module.exports = {
 
     deleteMarker: (req,res) => {
         const {marker_id} = req.params
-        console.log(marker_id)
+        // console.log(marker_id)
         const db = req.app.get('db')
         db.map.delete_marker(marker_id).then(marker => res.sendStatus(200)).catch(err => console.log(err))
     }

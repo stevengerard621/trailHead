@@ -5,6 +5,8 @@ const express = require('express'),
       authCtrl = require('./authCtrl'),
       userCtrl = require('./userCtrl'),
       mapCtrl = require('./mapCtrl'),
+      trailCtrl = require('./trailCtrl'),
+      stripeCtrl = require('./stripeCtrl'),
       {SERVER_PORT, CONNECTION_STRING, SESSION_SECRET} = process.env;
       app = express();
 
@@ -40,7 +42,9 @@ app.post('/api/marker', mapCtrl.addMarker)
 app.get('/api/getmarkers', mapCtrl.getMarkers)
 app.delete('/api/deletemarker/:marker_id', mapCtrl.deleteMarker)
 
-///MANIPULATING POSTS///
-// app.get('/api/posts/:id', ctrl.getPosts)
-// app.post('/api/post/:id', ctrl.addPost)
-// app.delete('/api/post/:postId/:userId', ctrl.deletePost)
+//TRAIL ENDPOINTS//
+app.get('/api/trail/:marker_id', trailCtrl.getTrail)
+app.put('/api/trailinfo/:marker_id', trailCtrl.editTrail)
+
+//STRIPE ENDPOINTS//
+app.post('/api/payment', stripeCtrl.pay)

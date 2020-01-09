@@ -1,0 +1,19 @@
+.selectedTrail {
+    border: 1px solid rgba(209, 209, 209, .3);
+    box-shadow: -5px 5px 20px rgba(196,226,196,.5);
+    width: 50vw;
+    height: 300px;
+    margin: 10px;
+    padding: 10px;
+    overflow: auto;
+    color: rgb(209, 209, 209);
+}
+
+@media (max-width: 400px) {
+    
+    .selectedTrail {
+        width: 90vw;
+        box-shadow: 0px 0px 20px rgba(196,226,196,.5);
+    }
+
+}

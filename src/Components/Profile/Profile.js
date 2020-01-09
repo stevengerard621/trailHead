@@ -5,6 +5,7 @@ import {getUser} from '../../redux/reducer'
 import ProfileMap from '../ProfileMap/ProfileMap'
 import ProfileBackground from '../ProfileBackground/ProfileBackground'
 import UserTrails from '../UserTrails/UserTrails'
+import SelectedTrail from '../SelectedTrail/SelectedTrail'
 import Axios from 'axios';
 import './sass/profile.scss'
 
@@ -68,6 +69,7 @@ class Profile extends Component {
                             onChange={(event) => this.handleInput(event)}/>
                         <button className='proButton' onClick={() => this.handleBioClick()}>ADD</button>
                     </form>
+                    <SelectedTrail />
                     <UserTrails className='proTrailList'/>
                 </div>
                 <div>

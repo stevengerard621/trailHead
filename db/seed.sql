@@ -27,5 +27,11 @@ trail_name varchar(150) not null,
 description varchar(500),
 distance numeric,
 gain integer,
-loss integer
+loss integer,
+user_id ref
+);
+
+create table th_password (
+    user_password varchar(200) not null,
+    user_id int references user_info(user_id)
 );

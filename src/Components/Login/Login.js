@@ -33,6 +33,7 @@ class Login extends Component {
     handleRegister = () => {
         // const {email, password} = this.state;
         axios.post('/api/register', {username: this.state.username, email: this.state.email,  user_password: this.state.password}).then(res => {
+            console.log(res.data)
             this.props.getUser(res.data)
             this.props.history.push('/Profile')
         })
@@ -43,7 +44,7 @@ class Login extends Component {
         return(
             <div>
                 <div className='carousel'>
-                    <p className='page-description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero fugit consequuntur facilis eius consequatur. Sit ad praesentium alias inventore, excepturi accusamus quis, quae in saepe maiores obcaecati adipisci a magnam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero fugit consequuntur facilis eius consequatur. Sit ad praesentium alias inventore, excepturi accusamus quis, quae in saepe maiores obcaecati adipisci a magnam</p>
+                    <p className='page-description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero fugit consequuntur facilis eius consequatur. Sit ad praesentium alias inventore, excepturi accusamus quis, quae in saepe maiores obcaecati adipisci a magnam. </p>
                     <br/>
                     <br/>
                     <div className='login'>

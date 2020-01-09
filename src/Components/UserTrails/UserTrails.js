@@ -12,7 +12,7 @@ class UserTrails extends Component {
     }
 
     getUserTrails = () => {
-        axios.get('/api//usertrails').then(res => (
+        axios.get('/api/usertrails').then(res => (
             this.setState({
                 userTrails: res.data
             })
