@@ -1,4 +1,6 @@
 import React, {Component} from 'react'
+import {connect} from 'react-redux'
+import {getMarker} from '../../redux/mapReducer'
 import axios from 'axios'
 import './sass/selectedTrail.scss'
 
@@ -22,12 +24,13 @@ class selectedTrail extends Component {
     }
     
     render(){
-        // const {trail} = this.state
+        const {user_id} = this.props.reducer.user
+        const {userId} = this.props
         return(
             <div className="selectedTrail">
                <h1>SELECTED TRAIL</h1>
                {this.state.trail.map((el, i) => (
-                   <div>
+                   <div key={i}>
                        <h3><u>{el.trail_name}</u></h3>
                        <h5>
                            <u>DESCRIPTION</u>
@@ -40,10 +43,22 @@ class selectedTrail extends Component {
                ))}
                <div>
                    <button onClick={this.props.toggleEdit}>Close</button>
+                   {user_id ?
+                    (user_id === userId
+                    ?
+                    <button>EDIT</button>
+                    :
+                    null)
+                    : null
+                   }
                </div>
             </div>
         )
     }
 }
 
-export default selectedTrail;
+const mapStateToProps = (reduxState) => {
+    return reduxState;
+}
+
+export default connect(mapStateToProps, {getMarker})(selectedTrail);

@@ -25,7 +25,8 @@ class TrailCard extends Component {
                 <section className="tcScroll">
                     {marker.length ? marker.map((el, i) => (
                         <div className="eachTrail" key = {i} id = {i}>
-                            <h4 onClick={() => {
+                            <h4 className="eachTrailName"
+                                onClick={() => {
                                 this.props.toggleEdit()
                                 this.props.setId(el.marker_id)
                             }}><strong><u>{el.trail_name}</u></strong></h4>

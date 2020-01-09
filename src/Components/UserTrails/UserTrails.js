@@ -31,12 +31,16 @@ class UserTrails extends Component {
         return(
             <section className="userTrails">
                 {userTrails.length ? userTrails.map((el, i) => (
-                    <div className="eachUserTrail" key = {i}>
-                        <h4><strong><u>{el.trail_name}</u></strong></h4>
+                    <div className="eachUserTrail" key = {i} id = {i}>
+                        <h4 className="userTrailName"
+                            onClick={() => {
+                            this.props.toggleEdit()
+                            this.props.setUserTrailId(el.marker_id, el.user_id)
+                            }}><strong><u>{el.trail_name}</u></strong></h4>
                         <h6>{`Latitude: ${el.lat}`}</h6>
                         <h6>{`Longitude: ${el.lng}`}</h6>
                         <div>
-                            <button type="button" onClick={() => this.deleteMarker(el.marker_id)}>DELETE</button>
+                            <button className="userTrailButton" type="button" onClick={() => this.deleteMarker(el.marker_id)}>DELETE</button>
                         </div>
                     </div>
             )) : null }

@@ -18,8 +18,22 @@
     overflow: auto;
 }
 
+.userTrailName:hover {
+    cursor: pointer;
+}
+
+
+
 @media (max-width: 400px) {
     .userTrails {
         width: 100vw;
+    }
+
+    .userTrailButton {
+        color: rgb(185,184,189);
+        border: 1px solid rgb(185,184,189);
+        border-radius: 3px;
+        background-color: transparent;
+        margin-bottom: 8px;
     }
 }

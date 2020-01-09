@@ -14,7 +14,10 @@ class Profile extends Component {
         super();
         this.state = {
             profile_pic: '',
-            bio: ''
+            bio: '',
+            editing: false,
+            userTrailId: 0,
+            userId: 0
         }
     }
 
@@ -36,6 +39,19 @@ class Profile extends Component {
         Axios.put('api/bio', {bio: this.state.bio}).then(res => {
             this.props.getUser(res.data[0])
             console.log(res.data, 'data, bioclick')
+        })
+    }
+
+    toggleEdit = () => {
+        this.setState({
+            editing: !this.state.editing
+        })
+    }
+
+    setUserTrailId = (id, userId) => {
+        this.setState({
+            userTrailId: id,
+            userId: userId
         })
     }
     
@@ -69,8 +85,10 @@ class Profile extends Component {
                             onChange={(event) => this.handleInput(event)}/>
                         <button className='proButton' onClick={() => this.handleBioClick()}>ADD</button>
                     </form>
-                    <SelectedTrail />
-                    <UserTrails className='proTrailList'/>
+                    <div>
+                    <UserTrails className='proTrailList' toggleEdit={this.toggleEdit} setUserTrailId={this.setUserTrailId}/>
+                    {this.state.editing ? <SelectedTrail userId={this.state.userId} toggleEdit={this.toggleEdit} id={this.state.userTrailId}/> : null}
+                    </div>
                 </div>
                 <div>
                     <ProfileMap />    
