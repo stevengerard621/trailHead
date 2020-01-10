@@ -7,10 +7,12 @@ const express = require('express'),
       mapCtrl = require('./mapCtrl'),
       trailCtrl = require('./trailCtrl'),
       stripeCtrl = require('./stripeCtrl'),
+    //   path = require('path'),
       {SERVER_PORT, CONNECTION_STRING, SESSION_SECRET} = process.env;
       app = express();
 
 app.use(express.json())
+app.use( express.static( `${__dirname}/../build` ));
 app.use(session({
     resave: false,
     saveUninitialized: true,
@@ -48,3 +50,8 @@ app.put('/api/trailinfo/:marker_id', trailCtrl.editTrail)
 
 //STRIPE ENDPOINTS//
 app.post('/api/payment', stripeCtrl.pay)
+
+//HOSTING//
+// app.get('*', (req, res)=>{
+//     res.sendFile(path.join(__dirname, '../build/index.html'));
+// });
