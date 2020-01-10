@@ -16,7 +16,7 @@ function Header(props){
 
         return(
             <div className='header'>
-                <h1 className='logo'>TRAILHEAD</h1>
+                <Link className='links' to='/'><h1 className='logo'>TRAILHEAD</h1></Link>
                 {!props.reducer.user.username ? <nav className='nav'>
                     <Link className='links' to='/'>Home</Link>
                     <Link className='links' to='/About'>About</Link>

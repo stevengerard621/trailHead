@@ -41,6 +41,7 @@ class UserTrails extends Component {
                         <h6>{`Longitude: ${el.lng}`}</h6>
                         <div>
                             <button className="userTrailButton" type="button" onClick={() => this.deleteMarker(el.marker_id)}>DELETE</button>
+                            {/* <button className="userTrailButton" type="button" onClick={() => window.confirm(`Are you sure you want to delete ${el.trail_name}?`)}>DELETE</button> */}
                         </div>
                     </div>
             )) : null }

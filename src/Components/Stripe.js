@@ -37,7 +37,7 @@ class Stripe extends Component {
           <div style={{display:'flex',flexDirection:'column', alignItems:'center', marginTop:'50px'}}>
             <StripeCheckout
               name='TRAILHEAD' //header
-              description='' //subtitle - beneath header
+              description='Donation Station' //subtitle - beneath header
               stripeKey={process.env.REACT_APP_STRIPE_KEY} //public key not secret key
               token={this.onToken} //fires the call back
               amount={this.props.amount * 100} //this will be in cents

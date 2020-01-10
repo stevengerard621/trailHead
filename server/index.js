@@ -51,7 +51,7 @@ app.put('/api/trailinfo/:marker_id', trailCtrl.editTrail)
 //STRIPE ENDPOINTS//
 app.post('/api/payment', stripeCtrl.pay)
 
-//HOSTING//
+// HOSTING//
 // app.get('*', (req, res)=>{
 //     res.sendFile(path.join(__dirname, '../build/index.html'));
 // });

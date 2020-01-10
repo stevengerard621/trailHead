@@ -23,7 +23,7 @@ class Login extends Component {
 
     handleLogin = () => {
         axios.post('./api/login', {email: this.state.email,  user_password: this.state.password}).then(res => {
-            console.log(res.data, 'hit')
+            // console.log(res.data, 'hit')
             this.props.getUser(res.data)
             this.props.history.push('/Profile')
         })
