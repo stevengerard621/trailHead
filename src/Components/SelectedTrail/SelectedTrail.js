@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {getMarker} from '../../redux/mapReducer'
+import {getMarker} from '../../redux/mapreducer'
 import axios from 'axios'
 import './sass/selectedTrail.scss'
 
@@ -21,7 +21,7 @@ class selectedTrail extends Component {
     }
 
     getTrail = () => {
-        // console.log(this.props.mapReducer.marker[e.target.id])
+        // console.log(this.props.mapreducer.marker[e.target.id])
         axios.get(
           `/api/trail/${this.props.id}`
           ).then(res => this.setState({

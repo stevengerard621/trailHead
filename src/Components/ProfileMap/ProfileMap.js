@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Map, GoogleApiWrapper, InfoWindow, Marker} from 'google-maps-react'
 import {connect} from 'react-redux'
-import {getMarker} from '../../redux/mapReducer'
+import {getMarker} from '../../redux/mapreducer'
 import './sass/profileMap.scss'
 import axios from 'axios';
 

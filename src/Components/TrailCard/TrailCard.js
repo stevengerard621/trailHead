@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import { getMarker } from '../../redux/mapReducer';
+import { getMarker } from '../../redux/mapreducer';
 import axios from 'axios';
 import './sass/trailCard.scss'
 

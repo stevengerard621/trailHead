@@ -1,7 +1,7 @@
 import {createStore, combineReducers, applyMiddleware} from 'redux';
 import reduxPromiseMiddleware from 'redux-promise-middleware';
 import reducer from './reducer';
-import mapReducer from './mapReducer';
+import mapReducer from './mapreducer';
 
 const rootReducer = combineReducers({
     reducer,
