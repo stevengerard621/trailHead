@@ -3,6 +3,7 @@ const initialState = {
 }
 
 const GET_MARKER = 'GET_MARKER'
+console.log(initialState.marker)
 
 export function getMarker(markerObj){
     return{
