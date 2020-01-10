@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import Stripe from '../Stripe'
 // import StripeCheckout from 'react-stripe-checkout';
 // import axios from 'axios'
 import './sass/about.scss'
@@ -10,25 +11,6 @@ function About () {
         // console.log('amount useEffect invoked')
     }, [amount])
 
-    // onOpened = () => {
-    //     console.log('this is opened')
-    //   }
-    
-    //   onClosed = () => {
-    //     console.log('this is closed')
-    //   }
-    
-    //   onToken = (token) => {
-    //     console.log(token)
-    //     let { amount } = this.state
-    //     amount /= 100
-    //     console.log(amount)
-    //     token.card = void 0
-    //     axios.post('/api/payment', { token, amount: this.state.amount }).then(res => {
-    //       console.log(res)
-    //       alert(`Congratulations you've paid ${amount}!`)
-    //     })
-    //   }
         return(
             <div  className='about'>
                <h1 className='title'>
@@ -46,35 +28,8 @@ function About () {
                     </strong>
                 </h2>
                 <input onChange={(e) => setAmount(e.target.value)} placeholder="DONATE AMOUNT" type="number"/>
+                <Stripe amount={amount}/>
                 <br/>
-                
-                {/* <div style={{display:'flex',flexDirection:'column', alignItems:'center', marginTop:'50px'}}>
-                    <StripeCheckout
-                    name='Class' //header
-                    image={imageUrl}
-                    description='This is stuff going beneath the header' //subtitle - beneath header
-                    stripeKey={process.env.REACT_APP_STRIPE_KEY} //public key not secret key
-                    token={this.onToken} //fires the call back
-                    amount={this.state.amount} //this will be in cents
-                    currency="USD" 
-                    // image={imageUrl} // the pop-in header image (default none)
-                    // ComponentClass="div" //initial default button styling on block scope (defaults to span)
-                    panelLabel="Submit Payment" //text on the submit button
-                    locale="en" //locale or language (e.g. en=english, fr=french, zh=chinese)
-                    opened={this.onOpened} //fires cb when stripe is opened
-                    closed={this.onClosed} //fires cb when stripe is closed
-                    allowRememberMe // "Remember Me" option (default true)
-                    billingAddress={false}
-                    // shippingAddress //you can collect their address
-                    zipCode={false}
-                    >
-                    {/* <button>Checkout</button> */
-                    /* </StripeCheckout> */
-                /* //     <input value={this.state.amount} */
-                //     type='number'
-                //     onChange={e=>setAmount({amount:+e.target.value})}/>
-                // </div> */}}
-            }
             </div>
         )
 }

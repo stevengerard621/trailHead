@@ -4,6 +4,7 @@ import Landing from './Components/Landing/Landing';
 import Profile from './Components/Profile/Profile';
 import Login from './Components/Login/Login';
 import About from './Components/About/About';
+import Stripe from './Components/Stripe'
 
 
 
@@ -13,5 +14,6 @@ export default (
         <Route path='/Profile' component={Profile}/>
         <Route path='/About' component={About}/>
         <Route path='/Login' component={Login}/>
+        <Route path='/payment' component={Stripe}/>
     </Switch>
 )
