@@ -27,6 +27,7 @@ class UserTrails extends Component {
     }
     
     render(){
+        console.log('hello')
         const {userTrails} = this.state
         return(
             <section className="userTrails">
