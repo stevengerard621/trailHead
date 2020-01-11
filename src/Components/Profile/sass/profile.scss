@@ -3,15 +3,17 @@
     // border: solid 5px chartreuse;
     display: flex;
     justify-content: space-evenly;
+    // flex-direction: column;
 }
 
 .userCard {
-    // border: solid 3px green;
+    border: solid 2px green;
     // height: 400px;
     // box-sizing: border-box;
     margin-top: 20px;
     margin-bottom: 20px;
-    width: 50vw;
+    width: 33vw;
+    height: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,7 +27,7 @@
     height: 150px;
     // width: 150px;
     border-radius: 75px;
-    margin: 30px;
+    margin: 10px;
 
 }
 

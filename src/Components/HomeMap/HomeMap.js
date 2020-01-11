@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const mapStyles = {
     width: '100%',
-    height: '500px',
+    height: '600px'
   };
 
 class HomeMap extends Component {
@@ -49,8 +49,8 @@ class HomeMap extends Component {
     
     render(){
         return(
-            <div>
-                    <Map
+            <div className='homeMap'>
+                    <Map 
                         google={this.props.google}
                         zoom={12}
                         style={mapStyles}

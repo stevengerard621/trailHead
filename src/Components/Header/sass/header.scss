@@ -1,6 +1,6 @@
 .header {
     height: 70px;
-    width: 100%;
+    width: 100vw;
     color: white;
     background-color: rgba(67,65,68, .5);
     // box-shadow: 5px 5px 20px rgba(67,65,68, .5);
@@ -23,9 +23,32 @@
     margin-right: 20px;
 }
 
+.dropMenu{
+    display: none;
+}
+
+#dropdown-nav {
+    display: none;
+}
+
+.dropLinks {
+    color: white;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 .navProPic {
     height: 40px;
     border-radius: 20px;
+}
+
+.navProPic:hover {
+    transform: scale(1.05);
+    transition-duration: .2s;
+    
 }
 
 .links {
@@ -43,5 +66,41 @@
 }
 
 @media (max-width: 400px) {
-    
+    .bigMenu {
+        display: none;
+    }
+
+    #dropdown-nav {
+        // border: 1px solid peru;
+        background-color: rgba(67,65,68, .5);
+        position: fixed;
+        top: 70px;
+        right: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        animation-name: beepbopboop;
+        animation-duration: 1500ms;
+        overflow: hidden;
+        height: 280px;
+        width: 150px;
+    }
+
+    @keyframes beepbopboop{
+        from{
+            height: 0px;
+        }
+        to{
+            height: 280px;
+        }
+    }
+
+    .hamburger {
+        display: flex;
+        height: 40px;
+        width: 40px;
+        border: 1px solid white;
+        background-color: red;
+    }
 }

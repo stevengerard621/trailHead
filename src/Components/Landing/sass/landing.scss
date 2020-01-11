@@ -1,5 +1,6 @@
 .carousel {
     height: 350px;
+    // border: 3px solid red;
     /* width: 100%; */
     background-image: url("https://jungfrauregion.swiss/fileadmin/_processed_/5/b/csm_TrailRunning_B174783_by.davidbirri_ca9323338d.jpg");
     background-position: center center;
@@ -25,6 +26,7 @@
 
 .componentRow {
     display: flex;
+    // flex-direction: column;
     justify-content: space-evenly;
 }
 

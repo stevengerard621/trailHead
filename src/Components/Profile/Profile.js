@@ -17,10 +17,16 @@ class Profile extends Component {
             bio: '',
             editing: false,
             userTrailId: 0,
-            userId: 0
+            userId: 0,
+            editProfile: true
         }
     }
 
+    toggleEditProfile = () => {
+        this.setState({
+            editProfile: !this.state.editProfile
+        })
+    }
 
     handleInput = (event) => {
         this.setState({
@@ -68,26 +74,40 @@ class Profile extends Component {
                             <div className='userInfo'>{this.props.reducer.user.email}</div>
                             <div className='userInfo'>{this.props.reducer.user.bio}</div>
                         </div>
-                        <input
-                            className='input' 
-                            type="text" 
-                            placeholder='     Profile Pic URL'
-                            name='profile_pic'
-                            value={this.state.profile_pic}
-                            onChange={(event) => this.handleInput(event)}/>
-                        <button className='proButton' onClick={() => this.handlePicClick()}>ADD</button>
-                        <input 
-                            className='input'
-                            type="text"
-                            placeholder='     User Bio'
-                            name='bio'
-                            value={this.state.bio}
-                            onChange={(event) => this.handleInput(event)}/>
-                        <button className='proButton' onClick={() => this.handleBioClick()}>ADD</button>
+                        {!this.state.editProfile
+                            ?
+                            <div>
+                                <input
+                                    className='input' 
+                                    type="text" 
+                                    placeholder='     Profile Pic URL'
+                                    name='profile_pic'
+                                    value={this.state.profile_pic}
+                                    onChange={(event) => this.handleInput(event)}/>
+                                <button className='proButton' onClick={() => this.handlePicClick()}>ADD</button>
+                                <input 
+                                    className='input'
+                                    type="text"
+                                    placeholder='     User Bio'
+                                    name='bio'
+                                    value={this.state.bio}
+                                    onChange={(event) => this.handleInput(event)}/>
+                                <button className='proButton' onClick={() => this.handleBioClick()}>ADD</button>
+                                <button onClick={this.toggleEditProfile}>CLOSE EDIT PROFILE</button>
+                            </div>
+                            :
+                            <button onClick={this.toggleEditProfile}>EDIT PROFILE</button>
+                        }
                     </form>
-                    <div>
-                    <UserTrails className='proTrailList' toggleEdit={this.toggleEdit} setUserTrailId={this.setUserTrailId}/>
-                    {this.state.editing ? <SelectedTrail userId={this.state.userId} toggleEdit={this.toggleEdit} id={this.state.userTrailId}/> : null}
+                    <div className='stack'>
+                        <UserTrails
+                         toggleEdit={this.toggleEdit} setUserTrailId={this.setUserTrailId}/>
+                        { this.state.editing 
+                        ? 
+                        <SelectedTrail
+                        userId={this.state.userId} toggleEdit={this.toggleEdit} id={this.state.userTrailId}/> 
+                        :
+                        null}
                     </div>
                 </div>
                 <div>

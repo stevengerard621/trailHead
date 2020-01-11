@@ -1,5 +1,6 @@
 .userTrails {
-    // border: 2px solid red;
+    border: 2px solid red;
+    margin: 20px;
     width: 33vw;
     overflow: auto;
     color: rgb(185,184,189);
@@ -10,7 +11,9 @@
 }
 
 .eachUserTrail {
-    border: 2px solid rgb(185,184,189);
+    // border: 2px solid rgb(185,184,189);
+    border: 1px solid rgba(209, 209, 209, .3);
+    box-shadow: 0px 0px 20px rgba(196,226,196,.5);
     margin: 3px;
     height: 140px;
     width: 300px;
