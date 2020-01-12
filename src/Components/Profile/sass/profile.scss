@@ -3,38 +3,43 @@
 
 .boop{
     // border: solid 5px chartreuse;
+    border-top: 8px solid $red;
     display: flex;
     justify-content: space-evenly;
-    // flex-direction: column;
+    height: 80vh;
+    padding: 20px 0px;
 }
 
 .userCard {
-    border: solid 2px green;
+    // border: solid 2px green;
     // height: 400px;
     // box-sizing: border-box;
     margin-top: 20px;
     margin-bottom: 20px;
     width: 33vw;
-    height: 300px;
+    height: 70vh;
     @include flexCenter(column);
     justify-content: center;
     color: $pColor;
     // align-items: flex-start;
 }
 
+.stack {
+    // border: 2px solid peru;
+    padding: 20px;
+    @include flexCenter(column)
+}
+
 .profilepic {
-    // border: solid 3px blue;
-    height: 150px;
-    // width: 150px;
-    border-radius: 75px;
-    // margin: 10px;
+    border: solid 2px $red;
+    height: 200px;
+    border-radius: 100px;
+    margin: 20px;
 
 }
 
 .proCent {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flexCenter(column);
 }
 
 
@@ -47,30 +52,33 @@
 
 .inputField {
     display: flex;
+    // border: 1px solid green;
 }
 
 .input {
-    border: 2px solid peru;
+    border: 2px solid $red;
     height: 35px;
     width: 150px;
     border-radius: 17.5px;
-    margin: 2px;
+    margin: 10px;
     font-size: .9em;
     outline-color: rgb(255,235,161);
     outline-width: 10px;
-    box-shadow: 0 0 15px rgb(255,235,161);
+    // box-shadow: 0 0 15px rgb(152,68,72);
 }
 
 .editPro {
-    @include flexCenter(column)
+    @include flexCenter(column);
+    margin: 5px;
 }
 
 .closeEditProBtn {
-    @include button()
+    @include button();
+    margin: 5px;
 }
 
 .editProBtn {
-    @include button()
+    @include button();
 }
 
 .input:hover {
@@ -79,13 +87,26 @@
 }
 
 .proButton {
-    @include button()
+    @include button();
+    margin: 4px;
+    // height: 40px;
+}
+
+.proFakeDiv {
+    border: 1px solid transparent;
+    width: 33vw;
+    height: 400px;
+    margin: 10px;
+    padding: 10px;
 }
 
 @media (max-width: 400px) {
 
     .boop {
         flex-direction: column;
+        justify-content: space-between;
+        height: 90vh;
+        border-top: 10px solid $red;
     }
 
     .profile {
@@ -106,10 +127,29 @@
     .userCard {
         margin-top: 10px;
         margin-bottom: 10px;
+        padding-bottom: 20px;
         height: 400px;
-        width: 95vw;
+        width: 100vw;
+        border-bottom: 30px solid $red;
         // display: flex;
         // justify-content: center;
+    }
+
+    .stack {
+        padding: 0px;
+    }
+
+    .input {
+        margin: 4px;
+    }
+
+    .proButton {
+        margin: 4px;
+    }
+
+    .closeEditProBtn {
+        margin: 10px;
+        padding: 8px 15px;
     }
 
     .editPro {

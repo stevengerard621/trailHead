@@ -1,19 +1,27 @@
 @import "../../parentSCSS/parent";
 
 .userTrails {
-    border: 1px solid red;
-    margin: 20px;
+    // border: 2px solid red;
+    margin-top: 20px;
+    margin-bottom: 20px;
     width: 33vw;
+    height: 20vw;
     overflow: auto;
-    color: $pColor;
     @include flexCenter(column);
     justify-content: center;
+    color: $pColor;
+}
+
+.userTrailsHeader {
+    text-decoration: underline;
+    text-decoration-color: $red;
+    
 }
 
 .eachUserTrail {
     // border: 2px solid $pColor;
-    border: 1px solid rgba(209, 209, 209, .3);
-    box-shadow: 0px 0px 20px rgba(196,226,196,.5);
+    border: 1px solid $red;
+    // box-shadow: 0px 0px 20px $red;
     margin: 3px;
     height: 140px;
     width: 300px;
@@ -36,6 +44,7 @@
     .userTrails {
         width: 95vw;
         margin: 10px;
+        height: 50vh;
     }
 
 }

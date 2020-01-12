@@ -18,13 +18,13 @@
 }
 
 .latlngInput {
-    border: 2px solid peru;
+    border: 2px solid $red;
     width: 200px;
     height: 35px;
     border-radius: 17.5px;
     outline-color: rgb(255,235,161);
     outline-width: 10px;
-    box-shadow: 0 0 15px rgb(255,235,161);
+    // box-shadow: 0 0 15px rgb(255,235,161);
     font-size: .9em;
 }
 
@@ -39,7 +39,7 @@
 
 @media (max-width: 400px) {
     .profileMap {
-        margin-top: 0px;
+        margin-top: 200px;
     }
 
     .profileMapForm {

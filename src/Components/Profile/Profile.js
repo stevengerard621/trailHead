@@ -112,7 +112,7 @@ class Profile extends Component {
                         <SelectedTrail
                         userId={this.state.userId} toggleEdit={this.toggleEdit} id={this.state.userTrailId}/> 
                         :
-                        null}
+                        <div className='proFakeDiv' ></div> }
                     </div>
                 </div>
                 <div>

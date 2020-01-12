@@ -30,6 +30,7 @@ class UserTrails extends Component {
         const {userTrails} = this.state
         return(
             <section className="userTrails">
+            <h3 className='userTrailsHeader' >TRAILS YOU HAVE UPLOADED</h3>
                 {userTrails.length ? userTrails.map((el, i) => (
                     <div className="eachUserTrail" key = {i} id = {i}>
                         <h4 className="userTrailName"
