@@ -1,9 +1,7 @@
-
+@import "../../parentSCSS/parent";
 
 .login_description {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    @include flexCenter(column);
     text-align: center;
     margin: 80px 20px 0px;
     width: 30vw;
@@ -12,6 +10,12 @@
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(67,65,68, .8)
 }
+
+// .loginContainer {
+//     border: 1px solid red;
+//     height: 280px;
+//     display: flex;
+// }
 
 .loginInput {
     height: 20px;
@@ -32,6 +36,10 @@
     cursor: pointer;
 }
 
+.loginBtn {
+    
+}
+
 @media (max-width: 400px) {
     .login_description {
         width: 90vw;
@@ -48,7 +56,6 @@
     }
 
     .register {
-        display: flex;
-        flex-direction: column;
+        @include flexCenter(column);
     }
 }

@@ -16,5 +16,12 @@
     -webkit-box-shadow: 0px 0px 20px rgba(196, 226, 196, 0.5);
             box-shadow: 0px 0px 20px rgba(196, 226, 196, 0.5);
   }
+  .selectedTrailButtons {
+    color: #b9b8bd;
+    border: 1px solid #b9b8bd;
+    border-radius: 3px;
+    background-color: transparent;
+    margin: 8px;
+  }
 }
 /*# sourceMappingURL=selectedTrail.css.map */

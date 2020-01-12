@@ -26,12 +26,14 @@ class Landing extends Component {
         return(
             <div>
                 <div className='carousel'>
-                    <p className='page-description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero fugit consequuntur facilis eius consequatur. Sit ad praesentium alias inventore, excepturi accusamus quis, quae in saepe maiores obcaecati adipisci a magnam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero fugit consequuntur facilis eius consequatur. Sit ad praesentium alias inventore, excepturi accusamus quis, quae in saepe maiores obcaecati adipisci a magnam</p>
+                    <p className='page-description'></p>
                 </div>
                 <div className="componentRow">
-                <TrailCard toggleEdit={this.toggleEdit} setId={this.setId}/>
-                {this.state.editing ? <SelectedTrail toggleEdit={this.toggleEdit} id={this.state.id}/> : null}
+                    <TrailCard toggleEdit={this.toggleEdit} setId={this.setId}/>
+                    {this.state.editing ? <SelectedTrail toggleEdit={this.toggleEdit} id={this.state.id}/> : <div className='fillerComponent'></div>}
                 </div>
+                <h3 className='addMarkerInfo'>
+                If you would like to add a Trailhead please login or register</h3>
                 <br/>
                 <br/>
                 <HomeMap />

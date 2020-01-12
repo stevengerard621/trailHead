@@ -76,15 +76,18 @@ class Profile extends Component {
                         </div>
                         {!this.state.editProfile
                             ?
-                            <div>
+                            <div className='editPro'>
+                                <div className='inputField'>
                                 <input
-                                    className='input' 
+                                    className='input'
                                     type="text" 
                                     placeholder='     Profile Pic URL'
                                     name='profile_pic'
                                     value={this.state.profile_pic}
                                     onChange={(event) => this.handleInput(event)}/>
                                 <button className='proButton' onClick={() => this.handlePicClick()}>ADD</button>
+                                </div>
+                                <div className='inputField'>
                                 <input 
                                     className='input'
                                     type="text"
@@ -93,10 +96,12 @@ class Profile extends Component {
                                     value={this.state.bio}
                                     onChange={(event) => this.handleInput(event)}/>
                                 <button className='proButton' onClick={() => this.handleBioClick()}>ADD</button>
-                                <button onClick={this.toggleEditProfile}>CLOSE EDIT PROFILE</button>
+                                </div>
+                                <button className='closeEditProBtn' onClick={this.toggleEditProfile}>CLOSE EDIT PROFILE</button>
+                                
                             </div>
                             :
-                            <button onClick={this.toggleEditProfile}>EDIT PROFILE</button>
+                            <button className='editProBtn' onClick={this.toggleEditProfile}>EDIT PROFILE</button>
                         }
                     </form>
                     <div className='stack'>

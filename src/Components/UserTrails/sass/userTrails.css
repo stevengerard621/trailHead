@@ -1,4 +1,6 @@
 .userTrails {
+  border: 1px solid red;
+  margin: 20px;
   width: 33vw;
   overflow: auto;
   color: #b9b8bd;
@@ -18,7 +20,9 @@
 }
 
 .eachUserTrail {
-  border: 2px solid #b9b8bd;
+  border: 1px solid rgba(209, 209, 209, 0.3);
+  -webkit-box-shadow: 0px 0px 20px rgba(196, 226, 196, 0.5);
+          box-shadow: 0px 0px 20px rgba(196, 226, 196, 0.5);
   margin: 3px;
   height: 140px;
   width: 300px;
@@ -26,9 +30,21 @@
   overflow: auto;
 }
 
+.userTrailName:hover {
+  cursor: pointer;
+}
+
 @media (max-width: 400px) {
   .userTrails {
-    width: 100vw;
+    width: 95vw;
+    margin: 10px;
+  }
+  .userTrailButton {
+    color: #b9b8bd;
+    border: 1px solid #b9b8bd;
+    border-radius: 3px;
+    background-color: transparent;
+    margin-bottom: 8px;
   }
 }
 /*# sourceMappingURL=userTrails.css.map */

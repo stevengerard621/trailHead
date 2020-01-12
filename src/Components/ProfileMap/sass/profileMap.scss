@@ -1,3 +1,5 @@
+@import "../../parentSCSS/parent";
+
 .profileMap {
     // border: 2px solid red;
     display: flex;
@@ -31,25 +33,20 @@
     cursor: pointer;
 }
 
+.addMarkerButton {
+    @include button()
+}
+
 @media (max-width: 400px) {
     .profileMap {
         margin-top: 0px;
     }
 
     .profileMapForm {
-        flex-direction: column;
-        align-items: center;
+        @include flexCenter(column);
     }
 
     .latlngInput {
         margin: 5px;
-    }
-
-    .addMarkerButton {
-        color: rgb(185,184,189);
-        border: 1px solid rgb(185,184,189);
-        border-radius: 3px;
-        background-color: transparent;
-        margin: 8px;
     }
 }

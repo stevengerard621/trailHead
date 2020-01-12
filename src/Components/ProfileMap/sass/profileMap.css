@@ -50,5 +50,12 @@
   .latlngInput {
     margin: 5px;
   }
+  .addMarkerButton {
+    color: #b9b8bd;
+    border: 1px solid #b9b8bd;
+    border-radius: 3px;
+    background-color: transparent;
+    margin: 8px;
+  }
 }
 /*# sourceMappingURL=profileMap.css.map */

@@ -1,8 +1,10 @@
+@import "../../parentSCSS/parent";
+
 .header {
     height: 70px;
     width: 100vw;
     color: white;
-    background-color: rgba(67,65,68, .5);
+    background-color: rgba(67,65,68, .85);
     // box-shadow: 5px 5px 20px rgba(67,65,68, .5);
     display: flex;
     align-items: center;
@@ -34,10 +36,8 @@
 .dropLinks {
     color: white;
     margin: 10px;
-    display: flex;
-    flex-direction: column;
+    @include flexCenter(column);
     justify-content: flex-start;
-    align-items: center;
 }
 
 .navProPic {
@@ -65,6 +65,24 @@
     color: rgb(37,78,111);
 }
 
+#bars {
+    display: none;
+}
+
+#bars:active {
+    animation-name: spin;
+    animation-duration: 800ms;
+}
+
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(90deg);
+    }
+}
+
 @media (max-width: 400px) {
     .bigMenu {
         display: none;
@@ -72,22 +90,20 @@
 
     #dropdown-nav {
         // border: 1px solid peru;
-        background-color: rgba(67,65,68, .5);
+        background-color: rgba(67,65,68, .85);
         position: fixed;
         top: 70px;
         right: 0px;
-        display: flex;
-        flex-direction: column;
+        @include flexCenter(column);
         justify-content: flex-end;
-        align-items: center;
-        animation-name: beepbopboop;
-        animation-duration: 1500ms;
+        animation-name: dropping;
+        animation-duration: 1100ms;
         overflow: hidden;
         height: 280px;
         width: 150px;
     }
 
-    @keyframes beepbopboop{
+    @keyframes dropping{
         from{
             height: 0px;
         }
@@ -98,9 +114,17 @@
 
     .hamburger {
         display: flex;
-        height: 40px;
-        width: 40px;
-        border: 1px solid white;
-        background-color: red;
+        height: 30px;
+        width: 30px;
+        // border: 1px solid white;
+        // background-color: red;
     }
+
+    #bars {
+        display: flex;
+        height: 30px;
+        width: 30px;
+        color: white;
+    }
+
 }

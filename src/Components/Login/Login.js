@@ -44,7 +44,8 @@ class Login extends Component {
         return(
             <div>
                 <div className='carousel'>
-                    <p className='login_description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero fugit consequuntur facilis eius consequatur. Sit ad praesentium alias inventore, excepturi accusamus quis, quae in saepe maiores obcaecati adipisci a magnam. </p>
+                    {/* <div className='loginContainer'> */}
+                    <p className='login_description'></p>
                     <br/>
                     <br/>
                     <div className='login'>
@@ -62,7 +63,7 @@ class Login extends Component {
                                 onChange={(event) => this.handleInput(event)}/>
                     </div>
                     <br/>
-                    <button onClick={this.handleLogin}>SIGN IN</button>
+                    <button className='loginBtn' onClick={this.handleLogin}>SIGN IN</button>
                     <br/>
                     <div className='register'>
                         <input 
@@ -86,7 +87,8 @@ class Login extends Component {
                             onChange={(event) => this.handleInput(event)}/>
                     </div> 
                     <br/>   
-                    <button onClick={this.handleRegister}>REGISTER</button>
+                    <button className='loginBtn' onClick={this.handleRegister}>REGISTER</button>
+                    {/* </div> */}
                 </div>
                 <HomeMap />
             </div>

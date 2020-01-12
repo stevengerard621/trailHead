@@ -1,3 +1,5 @@
+@import "../../parentSCSS/parent";
+
 .trailCard {
     border: 1px solid rgba(209, 209, 209, .3);
     box-shadow: 5px 5px 20px rgba(196,226,196,.5);
@@ -6,48 +8,45 @@
     margin: 10px;
     padding: 10px;
     overflow-y: visible;
-    display: flex;
+    @include flexCenter(column);
     justify-content: center;
-    align-items: center;
     padding-right: -30px;
     color: rgb(209, 209, 209);
 }
 
 .tcScroll {
     overflow: auto;
-    
     height: 100%;
 }
 
 .eachTrail {
     border: 1px solid rgba(196,226,196,.5);
-    box-shadow: 0px 0px 20px rgba(196,226,196,.5);
-    margin: 3px;
+    box-shadow: 0px 0px 10px rgba(196,226,196,.5);
+    margin: 10px;
     height: 140px;
-    width: 300px;
+    width: 35vw;
     padding-left: 30px;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // overflow: auto;
 }
 
 .eachTrailName:hover {
     cursor: pointer;
+    color: rgb(37,78,111);
 }
 
 @media (max-width: 400px) {
     
     .trailCard {
         border: 0px solid black;
-        height: 200px;
-        width: 90vw;
+        height: 205px;
+        width: 95vw;
+        padding: 0px;
         box-shadow: 0px 0px 0px rgba(196,226,196,.5);
     }
 
     .eachTrail {
         border: 1px solid rgba(196,226,196,.3);
         box-shadow: 0px 0px 15px rgba(196,226,196,.5);
+        width: 80vw;
         margin-top: 40px;
         padding-top: 5px;
     }

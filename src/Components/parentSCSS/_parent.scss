@@ -1,0 +1,30 @@
+$pColor: rgb(185,184,189);
+
+@mixin flexCenter($direction) {
+    display: flex;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+//TO USE MIXIN , @include flexCenter();
+
+@mixin button() {
+    cursor: pointer;
+    height: 30px;
+    color: $pColor;
+    background-color: transparent;
+    border: 2px solid rgb(152,68,71);
+    border-radius: 10px;
+    outline: none;
+    font-weight: bold;
+    &:hover {
+        color: rgb(38,78,111);
+    }
+    &:active {
+        transform: scale(.95);
+        transition-duration: .1s;
+    }
+    &:focus {
+        background-color: rgb(152,68,71);
+    }
+}

@@ -46,6 +46,22 @@
           justify-content: space-evenly;
 }
 
+.fillerComponent {
+  width: 50vw;
+  border: 1px solid transparent;
+  margin: 10px;
+  padding: 10px;
+}
+
+.addMarkerInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0px;
+  text-align: center;
+  color: #d1d1d1;
+}
+
 @media (max-width: 400px) {
   .page-description {
     width: 90vw;
@@ -58,6 +74,12 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .fillerComponent {
+    width: 0px;
+    border: 0px solid transparent;
+    margin: 0px;
+    padding: 0px;
   }
 }
 /*# sourceMappingURL=landing.css.map */

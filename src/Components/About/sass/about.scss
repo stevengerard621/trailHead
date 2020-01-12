@@ -1,19 +1,19 @@
+@import "../../parentSCSS/parent";
+
 .about {
     height: 350px;
     /* width: 100%; */
     background-image: url("https://i.ytimg.com/vi/cQ5Fi29BbTE/maxresdefault.jpg");
     background-position: center center;
     background-size: cover;
-    color: rgb(185,184,189);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    color: $pColor;
+    @include flexCenter(column);
     margin-bottom: 50px;
 }
 
 .title {
     margin-top: 360px;
-    color: rgb(185,184,189);
+    color: $pColor;
 }
 
 .subTitle {

@@ -4,7 +4,13 @@ import {Link} from 'react-router-dom';
 import {withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {logout} from '../../redux/reducer';
+import {library} from '@fortawesome/fontawesome-svg-core';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faBars} from '@fortawesome/free-solid-svg-icons';
 import './sass/header.scss'
+
+library.add(faBars);
+
 class Header extends Component{
     state = {
         dropMenu: false,
@@ -41,7 +47,10 @@ class Header extends Component{
                         </div>
                         }
                     </div>
-                    <nav className='hamburger' onClick = {()=>{this.dropMenuToggle()}}></nav>
+                    <nav ></nav>
+                    <nav className='hamburger' onClick = {()=>{this.dropMenuToggle()}}>
+                        <FontAwesomeIcon id="bars" icon="bars" />
+                    </nav>
                 </nav>
                 {this.state.dropMenu ?
                     <div id='dropdown-nav'>
