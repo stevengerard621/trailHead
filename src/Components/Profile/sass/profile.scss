@@ -14,8 +14,8 @@
     // border: solid 2px green;
     // height: 400px;
     // box-sizing: border-box;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    // margin-top: 20px;
+    // margin-bottom: 20px;
     width: 33vw;
     height: 70vh;
     @include flexCenter(column);
@@ -27,7 +27,7 @@
 .stack {
     // border: 2px solid peru;
     padding: 20px;
-    @include flexCenter(column)
+    @include flexCenter(column);
 }
 
 .profilepic {
@@ -42,11 +42,14 @@
     @include flexCenter(column);
 }
 
-
+.userName {
+    @include titles();
+    margin: 12px;
+}
 
 .userInfo {
     // border: solid red 1px;
-    margin: 2px;
+    margin: 7px;
     display: flex;
 }
 
@@ -56,15 +59,7 @@
 }
 
 .input {
-    border: 2px solid $red;
-    height: 35px;
-    width: 150px;
-    border-radius: 17.5px;
-    margin: 10px;
-    font-size: .9em;
-    outline-color: rgb(255,235,161);
-    outline-width: 10px;
-    // box-shadow: 0 0 15px rgb(152,68,72);
+    @include input(150px)
 }
 
 .editPro {
@@ -79,6 +74,7 @@
 
 .editProBtn {
     @include button();
+    margin: 7px;
 }
 
 .input:hover {
@@ -93,11 +89,12 @@
 }
 
 .proFakeDiv {
-    border: 1px solid transparent;
-    width: 33vw;
-    height: 400px;
+    @include border;
+    width: 40vw;
+    height: 370px;
     margin: 10px;
-    padding: 10px;
+    padding-left: 30px;
+    padding-bottom: 5px;
 }
 
 @media (max-width: 400px) {
@@ -105,8 +102,13 @@
     .boop {
         flex-direction: column;
         justify-content: space-between;
-        height: 90vh;
+        height: 200vh;
         border-top: 10px solid $red;
+    }
+
+    .proFakeDiv {
+        height: 420px;
+        width: 85vw;
     }
 
     .profile {
@@ -114,14 +116,18 @@
     }
 
     .profilepic {
-        height: 100px;
+        height: 150px;
         border-radius: 100px;
         // margin-left: 100px;
     }
 
+    .userName {
+        margin: 10px;
+    }
+
     .userInfo {
         justify-content: center;
-        margin: 10px;
+        margin: 5px;
     }
 
     .userCard {
@@ -131,8 +137,6 @@
         height: 400px;
         width: 100vw;
         border-bottom: 30px solid $red;
-        // display: flex;
-        // justify-content: center;
     }
 
     .stack {

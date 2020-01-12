@@ -1,10 +1,9 @@
 @import "../../parentSCSS/parent";
 
 .trailCard {
-    border: 1px solid rgba(209, 209, 209, .3);
-    box-shadow: 5px 5px 20px rgba(196,226,196,.5);
+    // @include border;
     width: 50vw;
-    height: 300px;
+    height: 310px;
     margin: 10px;
     padding: 10px;
     overflow-y: visible;
@@ -20,8 +19,7 @@
 }
 
 .eachTrail {
-    border: 1px solid rgba(196,226,196,.5);
-    box-shadow: 0px 0px 10px rgba(196,226,196,.5);
+    @include border;
     margin: 10px;
     height: 140px;
     width: 35vw;
@@ -44,8 +42,6 @@
     }
 
     .eachTrail {
-        border: 1px solid rgba(196,226,196,.3);
-        box-shadow: 0px 0px 15px rgba(196,226,196,.5);
         width: 80vw;
         margin-top: 40px;
         padding-top: 5px;

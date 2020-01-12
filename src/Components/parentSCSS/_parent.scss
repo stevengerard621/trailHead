@@ -29,3 +29,24 @@ $red: rgb(152,68,72);
         background-color: rgba(152,68,71, .5);
     }
 }
+
+@mixin titles() {
+    text-decoration: underline;
+    text-decoration-color: $red;
+}
+
+@mixin border() {
+    border: 1px solid $red;
+}
+
+@mixin input($width) {
+        border: 2px solid $red;
+        height: 35px;
+        width: $width;
+        border-radius: 17.5px;
+        margin: 10px;
+        font-size: .9em;
+        &:focus {
+            outline: none;
+        }
+}

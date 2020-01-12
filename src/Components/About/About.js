@@ -15,7 +15,7 @@ function About () {
             <div  className='about'>
                <h1 className='title'>
                    <strong>
-                       <u>ABOUT</u>
+                       ABOUT
                     </strong>
                 </h1>
                 <h2 className='subTitle'>WHO IS TRAILHEAD FOR?</h2>

@@ -70,7 +70,7 @@ class Profile extends Component {
                     <form className='userCard'>
                         <div className='proCent'>
                             <img className='profilepic' src={this.props.reducer.user.profile_pic} alt=""/>
-                            <div className='userInfo'><strong>{this.props.reducer.user.username}</strong></div>
+                            <div className='userName'><strong>{this.props.reducer.user.username}</strong></div>
                             <div className='userInfo'>{this.props.reducer.user.email}</div>
                             <div className='userInfo'>{this.props.reducer.user.bio}</div>
                         </div>

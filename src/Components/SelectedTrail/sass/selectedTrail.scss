@@ -2,14 +2,16 @@
 
 .selectedTrail {
     // @include flexCenter(column);
-    border: 1px solid rgba(209, 209, 209, .3);
-    box-shadow: -5px 5px 20px rgba(196,226,196,.5);
-    width: 33vw;
-    height: 400x;
+    // border: 1px solid rgba(209, 209, 209, .3);
+    // box-shadow: -5px 5px 20px rgba(196,226,196,.5);
+    @include border;
+    width: 40vw;
+    height: 370px;
     margin: 10px;
-    padding: 10px;
+    padding-left: 30px;
+    padding-bottom: 5px;
     overflow: auto;
-    color: rgb(209, 209, 209);
+    color: $pColor;
 }
 
 .selectedTrailButtons {
@@ -21,7 +23,8 @@
     
     .selectedTrail {
         width: 85vw;
-        box-shadow: 0px 0px 20px rgba(196,226,196,.5);
+        height: 420px;
+        // box-shadow: 0px 0px 20px rgba(196,226,196,.5);
     }
 
 }

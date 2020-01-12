@@ -4,6 +4,7 @@
     // border: 2px solid red;
     display: flex;
     flex-direction: column;
+    border-top: 8px solid $red;
 }
 
 .profileMapForm {
@@ -18,14 +19,7 @@
 }
 
 .latlngInput {
-    border: 2px solid $red;
-    width: 200px;
-    height: 35px;
-    border-radius: 17.5px;
-    outline-color: rgb(255,235,161);
-    outline-width: 10px;
-    // box-shadow: 0 0 15px rgb(255,235,161);
-    font-size: .9em;
+    @include input(200px)
 }
 
 .latlngInput:hover {
@@ -39,7 +33,7 @@
 
 @media (max-width: 400px) {
     .profileMap {
-        margin-top: 200px;
+        // margin-top: 200px;
     }
 
     .profileMapForm {
