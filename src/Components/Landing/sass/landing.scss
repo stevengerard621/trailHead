@@ -23,6 +23,28 @@
 //     box-shadow: 0px 0px 30px rgb(67,65,68)
 // }
 
+.textCenter {
+    @include flexCenter(column);
+    // border: 1px solid red;
+}
+
+.welcome {
+    @include flexCenter(column);
+    margin: 0px;
+    color: $pColor;
+    @include titles();
+}
+
+.welcomeText {
+    @include flexCenter(column);
+    justify-content: center;
+    color: $pColor;
+    font-weight: 500;
+    width: 400px;
+    margin: 10px;
+    text-align: center;
+}
+
 .componentRow {
     display: flex;
     // flex-direction: column;
@@ -42,11 +64,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(209, 209, 209);
+    color: $pColor;
+    font-weight: 500;
 }
 
 @media (max-width: 400px) {
     .page-description {
+        width: 90vw;
+    }
+
+    .welcomeText {
         width: 90vw;
     }
 
@@ -65,5 +92,6 @@
 
     .addMarkerInfo {
         text-align: center;
+        margin: 10px;
     }
 }

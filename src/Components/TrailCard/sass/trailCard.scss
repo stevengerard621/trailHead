@@ -10,7 +10,7 @@
     @include flexCenter(column);
     justify-content: center;
     padding-right: -30px;
-    color: rgb(209, 209, 209);
+    color: $pColor;
 }
 
 .tcScroll {
