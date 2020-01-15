@@ -5,11 +5,15 @@
     margin-top: 20px;
     margin-bottom: 20px;
     width: 33vw;
-    height: 20vw;
-    overflow: auto;
+    height: 60vh;
+    overflow: scroll;
     @include flexCenter(column);
     justify-content: center;
     color: $pColor;
+}
+
+.tcScroll {
+    //in trailCard scss
 }
 
 .userTrailsHeader {
@@ -17,13 +21,13 @@
 }
 
 .eachUserTrail {
-    // border: 2px solid $pColor;
     @include border;
     margin: 3px;
-    height: 140px;
+    height: 170px;
     width: 300px;
     padding-left: 30px;
     padding-bottom: 5px;
+    padding-right: 10px;
     overflow: auto;
 }
 
@@ -40,7 +44,6 @@
 
 @media (max-width: 400px) {
     .userTrails {
-        // border: 1px solid yellow;
         width: 95vw;
         height: 50vh;
     }

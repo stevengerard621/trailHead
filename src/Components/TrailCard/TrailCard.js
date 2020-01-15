@@ -22,7 +22,7 @@ class TrailCard extends Component {
         // console.log(this.props.mapReducer.marker, 'hit boom')
         return(
             <div className="trailCard">
-                {/* <h2>TRAILHEAD</h2> */}
+                {/* <h2>TRAILHEAD LIST</h2> */}
                 <section className="tcScroll">
                     {marker.length ? marker.map((el, i) => (
                         <div className="eachTrail" key = {i} id = {i}>

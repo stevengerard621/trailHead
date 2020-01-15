@@ -41,7 +41,7 @@ class Landing extends Component {
                     {this.state.editing ? <SelectedTrail toggleEdit={this.toggleEdit} id={this.state.id}/> : <div className='fillerComponent'></div>}
                 </div>
                 <h3 className='addMarkerInfo'>
-                If you would like to add a Trailhead please login or register. Otherwise take a look around for the start to your next adventure!
+                    If you would like to add a Trailhead please login or register. Otherwise take a look around for the start to your next adventure!
                 </h3>
                 <br/>
                 <br/>

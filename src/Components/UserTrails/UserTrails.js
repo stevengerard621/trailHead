@@ -31,6 +31,7 @@ class UserTrails extends Component {
         return(
             <section className="userTrails">
             <h3 className='userTrailsHeader' >TRAILS YOU HAVE UPLOADED</h3>
+                <div className='tcScroll'>
                 {userTrails.length ? userTrails.map((el, i) => (
                     <div className="eachUserTrail" key = {i} id = {i}>
                         <h4 className="userTrailName"
@@ -46,6 +47,7 @@ class UserTrails extends Component {
                         </div>
                     </div>
             )) : null }
+            </div>
         </section>
         )
     }
